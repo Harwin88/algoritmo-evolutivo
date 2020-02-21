@@ -1,0 +1,11 @@
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\bin\Debug\netcoreapp3.1\exmamen-mvm-in.exe
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\bin\Debug\netcoreapp3.1\exmamen-mvm-in.deps.json
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\bin\Debug\netcoreapp3.1\exmamen-mvm-in.runtimeconfig.json
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\bin\Debug\netcoreapp3.1\exmamen-mvm-in.runtimeconfig.dev.json
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\bin\Debug\netcoreapp3.1\exmamen-mvm-in.dll
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\bin\Debug\netcoreapp3.1\exmamen-mvm-in.pdb
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\obj\Debug\netcoreapp3.1\exmamen-mvm-in.csprojAssemblyReference.cache
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\obj\Debug\netcoreapp3.1\exmamen-mvm-in.AssemblyInfoInputs.cache
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\obj\Debug\netcoreapp3.1\exmamen-mvm-in.AssemblyInfo.cs
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\obj\Debug\netcoreapp3.1\exmamen-mvm-in.dll
+C:\Users\Harwin\projet-.net-core\exmamen-mvm-in\obj\Debug\netcoreapp3.1\exmamen-mvm-in.pdb
