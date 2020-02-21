@@ -4,7 +4,7 @@ namespace exmamen_mvm_in
 {
     class Program
     {
-
+        int[] vectoresCalifi = new int[50];
         public char[] initialCadena()
         {
             char[] vectCadenas = new char[26];
@@ -41,6 +41,20 @@ namespace exmamen_mvm_in
                      }
                return pos;
             }
+        public int califiDevec(string stringDatos){
+          string objetivo = "MVM INGENIERIA DE SOFTWARE";
+          char[] cadeLLegada = stringDatos.ToCharArray(0, 26);
+            char[] cadeNaObj = objetivo.ToCharArray(0, 26);
+                 int veces=0;
+                for (int i = 0; i < 26; i++)
+                     {
+                         if(cadeNaObj[i]== cadeLLegada[i])
+                         {
+                             veces +=1;
+                         }
+                     }
+               return veces;
+        }
 
             static void Main(string[] args)
             {
@@ -51,10 +65,11 @@ namespace exmamen_mvm_in
                 string respuesta = "";
                 string[] cadenasNue = new string[50];
                 Random rnd = new Random();
-              
+                int calificaCion=0;
                 char letra;
+                int totalCali=0;
                 int[,] cuenta = new int[26, 50];
-            for (int y = 0; y < 200; y++)
+            for (int y = 0; y < 50; y++)
                 {
                     for (int i = 0; i < 26; i++)
                     {
@@ -66,9 +81,9 @@ namespace exmamen_mvm_in
                         poss = objPro.buscarCharEnvector(letra);
                        if(poss[0]!=null)
                         {
-                            for(int j=0; j<= poss.Length; j++){
-                           cadenaInicial[poss[j]] = letra;
-                           System.Console.WriteLine(letra);
+                            for(int j=0; j<= poss.Length-1; j++){
+                               cadenaInicial[poss[j]] = letra;
+                               
                              }
                         }else{
                                  vectCadenas[i, y] = cadenaInicial[i];
@@ -79,8 +94,19 @@ namespace exmamen_mvm_in
                           char[] charArray = respuesta.ToCharArray();
                           Array.Reverse( charArray );
                           string respue= new string( charArray );
-
-                        System.Console.WriteLine(respue);
+                           int valVt= objPro.califiDevec(respue);
+                           
+                            System.Console.WriteLine(respue+"--Total--"+valVt);
+                            if(valVt==26){
+                               y=49;
+                           }else{
+                               //vuelve a generar las cadenas asta optener una
+                               //mutacion perfecta.
+                               if(y==49){
+                                    y=0;
+                               }
+                           }
+                            totalCali=0;
                         respuesta = "";
                       System.Console.WriteLine(cadenasNue[y]);
                     }
