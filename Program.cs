@@ -26,20 +26,18 @@ namespace exmamen_mvm_in
                 return vectCadenas;
             }
             //compara vectores con tamaños iguales 
-            public int[] buscarCharEnvector(char cara){
+            public int[] buscarCharEnvector(char cara, int p){
                  string objetivo = "MVM INGENIERIA DE SOFTWARE";
                  int veces=0;
                  int[] pos = new int[5];
                   char[] cadeNaObj = objetivo.ToCharArray(0, 26);
-                  for (int i = 0; i < 26; i++)
-                     {
-                         if(cadeNaObj[i]== cara)
+                
+                         if(cadeNaObj[p]== cara)
                          {
-                            pos[veces]= i;
+                            pos[veces]= p;
                             veces +=1;
                          }
-                     }
-               return pos;
+                return pos;
             }
         public int califiDevec(string stringDatos){
           string objetivo = "MVM INGENIERIA DE SOFTWARE";
@@ -78,7 +76,7 @@ namespace exmamen_mvm_in
                          //carateristica que hace mutar el algorigo es si la 
                          //letra generada esta en el vetor iinicial "mvm ingenieria..."
                          //realiza una busqueda de la letra en todo el vector.
-                        poss = objPro.buscarCharEnvector(letra);
+                        poss = objPro.buscarCharEnvector(letra, i);
                        if(poss[0]!=null)
                         {
                             for(int j=0; j<= poss.Length-1; j++){
@@ -96,13 +94,14 @@ namespace exmamen_mvm_in
                           string respue= new string( charArray );
                            int valVt= objPro.califiDevec(respue);
                            
-                            System.Console.WriteLine(respue+"--Total--"+valVt);
+                            System.Console.WriteLine("Generación: "+y+"-"+respue+"- Puntaje: "+valVt);
                             if(valVt==26){
                                y=49;
                            }else{
                                //vuelve a generar las cadenas asta optener una
                                //mutacion perfecta.
                                if(y==49){
+                                   System.Console.WriteLine("---interaciones---");
                                     y=0;
                                }
                            }
